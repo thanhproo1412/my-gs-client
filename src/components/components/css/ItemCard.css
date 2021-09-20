@@ -1,0 +1,107 @@
+.itemCard {
+  background: #afcbff;
+  width: 300px;
+  border-radius: 4px;
+  margin: 1em;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 5px 10px rgba(71, 71, 71, 1);
+}
+.image-wrapper {
+  position: relative;
+  padding-bottom: 106.2%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.03);
+}
+.itemCardInfo {
+  width: 100%;
+  height: 85px;
+  left: 0;
+  bottom: 0;
+  line-height: 2em;
+  padding-left: 0.7em;
+  background-image: radial-gradient(ellipse at top left, #42454c, #808a9e);
+}
+.itemCardName {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+  color: white;
+  font-size: 1em;
+  width: 90%;
+}
+.itemCardDate {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  left: 0;
+  bottom: 0;
+  line-height: 2em;
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+.itemCardHover {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 85px);
+  background: rgba(0, 0, 0, 0.651);
+  z-index: 10;
+  padding: 1em;
+  top: -100%;
+  text-decoration: none;
+}
+.itemCardHover:hover{
+  text-decoration: none;
+}
+@keyframes cardOpacity{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.itemCard:hover > .itemCardHover {
+  top: 0;
+  animation: cardOpacity 0.2s;
+}
+.itemCard:hover > .image-wrapper img{
+    transform: scale(1);
+    transition: transform .2s;
+    filter: blur(2px);
+}
+.itemCardHoverTitle {
+  color: #ffcf46;
+  margin-bottom: 8px;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.itemCardHoverInfo {
+  max-height: 150px;
+  color: rgb(238, 238, 238);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: inherit;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.itemCardBtn {
+  padding: 6px 12px;
+  border-radius: 100px;
+  margin: 8px;
+  cursor: pointer;
+  background: #b032ff;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  outline: none;
+  display: inline-block;
+}
+.itemCardBtn:hover {
+  background: #9d00ff;
+}

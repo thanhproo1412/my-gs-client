@@ -1,0 +1,43 @@
+.todo-list button{
+    width: 42px;
+    height: 42px;
+    outline: none;
+    border: none;
+}
+.complete-btn{
+    color:white;
+    background: rgb(40, 197, 20);
+}
+.complete-btn:hover{
+    background: rgb(69, 255, 45);
+}
+.trash-btn{
+    background :rgb(212, 56, 56);
+    color:white;
+}
+.trash-btn:hover{
+    background :rgb(255, 91, 91);
+}
+.todo-list{
+    display: flex;
+    width:60%;
+    margin-left:25%;
+    margin-top: 1em;
+}
+.todo-list li{
+    color: rgb(0, 0, 0);
+    background:white;
+    text-align: center;
+    line-height: 42px;
+    padding: 0px 26px;
+    list-style-type: none;
+    min-width: 70%;
+    max-width: 70%;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.completed{
+    text-decoration: rgba(21, 248, 0, 0.9) line-through 2px;
+    color:rgb(0, 0, 0 ,.9) !important;
+}
