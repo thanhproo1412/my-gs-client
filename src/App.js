@@ -25,7 +25,7 @@ class App extends Component {
           <Router style={{ margin: '0px', padding: '0px' }}>
             <Switch style={{ margin: '0px', padding: '0px' }}>
               <Route style={{ margin: '0px', padding: '0px' }} exact path="/" component={Home} />
-              <Route path="/TodoPage" component={TodoPage} />
+              <Route path="/TodoPage" component={() => <TodoPage authorized={false} />} />
               <Route path="/AdminBoard" component={AdminBoard} />
               <Route path="/Login" component={Login} />
               <Route path="/register" component={Register} />
