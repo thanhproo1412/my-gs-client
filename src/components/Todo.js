@@ -14,7 +14,13 @@ export const Todo = () => {
     // const [filteredTodos, setFilteredTodos] = useState([])
 
     const getTodo = () => {
-        axios.get('http://localhost:3001/api/gettodos')
+        axios.get('https://my-gs-server.herokuapp.com/api/posts/todos',
+            {
+                headers: {
+                    "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ0M2M3OTE4N2I2ZDM3YjcwYzgzMjgiLCJpYXQiOjE2MzE4NjM2Mjd9.b4SSPt7pFo4dTdgHERj13UOUlwJ22Zwmq7-SVVYSM_o"
+                }
+            }
+        )
             .then(res => {
                 setTodos(res.data);
             })
@@ -23,7 +29,7 @@ export const Todo = () => {
 
     useEffect(() => {
         getTodo()
-    }, [checkPost]) 
+    }, [checkPost])
 
     // useEffect(() => {
     // }, [todos, status]) // chay. function khi todos/ status thay doi

@@ -20,7 +20,7 @@
 @media screen and (max-width: 991px) {
   .my-nav-collapse-flex {
     display: flex;
-    overflow:hidden;
+    /* overflow:hidden; */
   }
   .my-collapse-none {
     display: block !important;
@@ -191,8 +191,7 @@
   background: #262626 !important;
   transition: .5s ease-out;
 }
-.my-nav-bg-dark .my-nav-scroll-visible{
-  display: none !important;
+.my-nav-scroll-visible{
   transition: .5s ease-out;
 }
 .nav-margin{

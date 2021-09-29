@@ -12,8 +12,6 @@ export const Login = () => {
     const getToken = localStorage.getItem('authToken')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [token, setToken] = useState('')
-
     const getUsername = event => {
         setUsername(event.target.value);
     }
@@ -22,20 +20,13 @@ export const Login = () => {
     }
 
     const login = () => {
-        axios.post('https://my-gs-server.herokuapp.com/api/login',
-            {
-                headers: {
-                    authToken: getToken
-                }
-            },
+        axios.post('https://my-gs-server.herokuapp.com/api/user/login',
             {
                 username: username,
                 password: password,
             })
             .then((res) => {
-                setToken(res.headers)
-                console.log(token)
-                localStorage.setItem('authToken', token)
+                localStorage.setItem('authToken', res.data)
                 history.replace('/')
             })
             .catch(err => console.log(err));
@@ -47,12 +38,12 @@ export const Login = () => {
                 <form className='form-login'>
                     <h1 className='login-form-title'>Login</h1>
                     <div className="form-row">
-                        <label for="email">Email</label>
-                        <input onChange={getUsername} type="email" name="email" autocomplete="off" placeholder="Your Email" />
+                        <label for="Username">Username</label>
+                        <input onChange={getUsername} type="Username" name="Username" placeholder='admin123' />
                     </div>
                     <div className="form-row">
                         <label for="password">Password</label>
-                        <input onChange={getPassword} type="password" name="password" />
+                        <input onChange={getPassword} type="password" name="password" placeholder='admin123' />
                     </div>
                     <div className="d-flex justify-content-center">
                         <MyButton1 onClick={login}>Login</MyButton1>
