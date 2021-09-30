@@ -7,17 +7,31 @@ import axios from 'axios';
 
 export const TodoItem = ({ completed, text, key, id, checkPost, setCheckPost }) => {
 
+    const localToken = localStorage.getItem('authToken')
     const deleleHandler = () => {
-        axios.delete(`http://localhost:3001/api/deletetodos/${id}`)
-        setCheckPost(checkPost+1)
+        axios.delete('https://my-gs-server.herokuapp.com/api/posts/todos/delete',
+        {
+            headers: {
+                "authToken": localToken
+            }
+        },{
+            id : id
+        })
+        setCheckPost(checkPost + 1)
     }
     const completeHandler = () => {
-        const done = Math.abs(completed-1)  // Math.abs : gia tri tuyet doi
+        const done = Math.abs(completed - 1)  // Math.abs : gia tri tuyet doi
         console.log(done)
-        axios.put('http://localhost:3001/api/updatetodos',{
-            id: id,
-            todoDone: done
-        })
+        axios.put('https://my-gs-server.herokuapp.com/api/posts/todos/done',
+            {
+                headers: {
+                    "authToken": localToken
+                }
+            }
+            , {
+                id: id,
+                todoDone: done
+            })
     }
 
     return (

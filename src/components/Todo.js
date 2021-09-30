@@ -10,6 +10,7 @@ export const Todo = () => {
     const [todos, setTodos] = useState([])
     const [status, setStatus] = useState('all')
     const [checkPost, setCheckPost] = useState(0)
+    const localToken = localStorage.getItem('authToken')
 
     // const [filteredTodos, setFilteredTodos] = useState([])
 
@@ -17,7 +18,7 @@ export const Todo = () => {
         axios.get('https://my-gs-server.herokuapp.com/api/posts/todos',
             {
                 headers: {
-                    "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ0M2M3OTE4N2I2ZDM3YjcwYzgzMjgiLCJpYXQiOjE2MzE4NjM2Mjd9.b4SSPt7pFo4dTdgHERj13UOUlwJ22Zwmq7-SVVYSM_o"
+                    "authToken": localToken
                 }
             }
         )
