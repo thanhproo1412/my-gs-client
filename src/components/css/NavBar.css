@@ -197,3 +197,6 @@
 .nav-margin{
   height:80px;
 }
+.my-nav-bg-white{
+  background: white !important;
+}

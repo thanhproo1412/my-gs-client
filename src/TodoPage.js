@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom'
 
 export const TodoPage = ({ authorized }) => {
 
-    if (!authorized) {
+    if (authorized = false) {
         return <Redirect to='/login' />
     }
     return (

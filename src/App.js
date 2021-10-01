@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import { TodoPage } from './TodoPage';
@@ -17,15 +17,21 @@ import { BackToTopArrow } from './components/components/CustomStyle';
 const App = () => {
   const [checklogin, setChecklogin] = useState(false);
   const getToken = localStorage.getItem('authToken')
+  useEffect(() => {
+    if (getToken != ''){
+      setChecklogin(true)
+    }
+    else setChecklogin(false)
+  },)
 
   return (
     <React.Fragment style={{ margin: '0px', padding: '0px' }}>
-      <MyNav checklogin={checklogin} setChecklogin={setChecklogin} />
       <Layout style={{ margin: '0px', padding: '0px', marginTop: '160px' }}>
         <Router style={{ margin: '0px', padding: '0px' }}>
+          <MyNav />
           <Switch style={{ margin: '0px', padding: '0px' }}>
             <Route style={{ margin: '0px', padding: '0px' }} exact path="/" component={Home} />
-            <Route path="/TodoPage" component={() => <TodoPage authorized={checklogin} />} />
+            <Route path="/TodoPage" component={() => <TodoPage authorized={checklogin}  />} />
             <Route path="/AdminBoard" component={AdminBoard} />
             <Route path="/Login" component={Login} />
             <Route path="/register" component={Register} />

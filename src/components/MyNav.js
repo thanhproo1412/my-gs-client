@@ -14,32 +14,33 @@ const faGooglePlusGIcon = <FontAwesomeIcon icon={faGooglePlusG} />
 const faYoutubeIcon = <FontAwesomeIcon icon={faYoutube} />
 const faInstagramIcon = <FontAwesomeIcon icon={faInstagram} />
 
-export const MyNav = ({ checklogin, setChecklogin }) => {
-
+export const MyNav = () => {
     const history = useHistory()
     const [username, setUsername] = useState([''])
     const localToken = localStorage.getItem('authToken')
-    axios.get('https://my-gs-server.herokuapp.com/api/posts/user/info',
-        {
-            headers: {
-                authToken: localToken
-            }
-        })
-        .then((res) => {
-            if (res.status == 200) {
-                setChecklogin(true)
-                setUsername(res.data.username)
-                console.log(res.data)
-            }
-            else {
-                localStorage.removeItem('authToken')
-                setChecklogin(false)
-            }
-        })
-        .catch(err => console.log(err));
+    useEffect(() => {
+        axios.get('https://my-gs-server.herokuapp.com/api/posts/user/info',
+            {
+                headers: {
+                    authToken: localToken
+                }
+            })
+            .then((res) => {
+                if (res.status == 200) {
+                    setUsername(res.data.username)
+                    console.log(res.data)
+                }
+                else {
+                    localStorage.removeItem('authToken')
+                }
+            })
+            .catch(err => console.log(err));
+    },[])
+
     const logout = () => {
         localStorage.removeItem('authToken')
-        history.replace('/login')
+        history.push('/login')
+        window.location.reload();
     }
     const [scrollY, setScrollY] = useState(0);
     const [navBg, setNavBg] = useState('my-nav-bg-white')
@@ -104,12 +105,12 @@ export const MyNav = ({ checklogin, setChecklogin }) => {
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Comunity</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Contact</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Pages</Nav.Link>
-                            <NavDropdown bsPrefix='my-nav-link my-nav-dropdown' title={username} id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                            <NavDropdown bsPrefix='my-nav-link my-nav-dropdown' title='More info' id="navbarScrollingDropdown">
+                                <NavDropdown.Item href="/ListSanPham">Action</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+                                <NavDropdown.Item href="/ListSanPham">Another action</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
+                                <NavDropdown.Item href="/ListSanPham">Something else here</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link bsPrefix='my-nav-link' href="/TodoPage">Todo Page</Nav.Link>
                         </Nav>

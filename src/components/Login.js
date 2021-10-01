@@ -28,6 +28,7 @@ export const Login = () => {
             .then((res) => {
                 localStorage.setItem('authToken', res.data)
                 history.replace('/')
+                window.location.reload(); 
             })
             .catch(err => console.log(err));
     }
