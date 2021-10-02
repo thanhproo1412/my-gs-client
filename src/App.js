@@ -47,7 +47,7 @@ const App = () => {
           <MyNav username={username} />
           <Switch style={{ margin: '0px', padding: '0px' }}>
             <Route style={{ margin: '0px', padding: '0px' }} exact path="/" component={Home} />
-            <Route path="/TodoPage" component={() => <TodoPage authorized={checklogin} />} />
+            <Route path="/TodoPage" component={() => <TodoPage authorized={true} />} />
             <Route path="/AdminBoard" component={AdminBoard} />
             <Route path="/Login" component={Login} />
             <Route path="/register" component={Register} />
