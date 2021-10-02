@@ -13,25 +13,41 @@ import { AdminBoard } from './components/AdminBoard';
 // import { Jumbotron } from './components/Jumbotron';
 import ItemDetail from './ItemDetail';
 import { BackToTopArrow } from './components/components/CustomStyle';
+import axios from 'axios';
+
 
 const App = () => {
-  const [checklogin, setChecklogin] = useState(false);
-  const getToken = localStorage.getItem('authToken')
-  useEffect(() => {
-    if (getToken != ''){
-      setChecklogin(true)
-    }
-    else setChecklogin(false)
-  },)
+  const [checklogin, setChecklogin] = useState();
+  const localToken = localStorage.getItem('authToken')
+  const [username, setUsername] = useState([''])
+  useEffect(async () => {
+    await axios.get('https://my-gs-server.herokuapp.com/api/posts/user/info',
+      {
+        headers: {
+          authToken: localToken
+        }
+      })
+      .then((res) => {
+        if (res.status == 200) {
+          setUsername(res.data.username)
+          setChecklogin(true)
+        }
+        else {
+          localStorage.removeItem('authToken')
+          setChecklogin(false)
+        }
+      })
+      .catch(err => console.log(err));
+  }, [])
 
   return (
     <React.Fragment style={{ margin: '0px', padding: '0px' }}>
       <Layout style={{ margin: '0px', padding: '0px', marginTop: '160px' }}>
         <Router style={{ margin: '0px', padding: '0px' }}>
-          <MyNav />
+          <MyNav username={username} />
           <Switch style={{ margin: '0px', padding: '0px' }}>
             <Route style={{ margin: '0px', padding: '0px' }} exact path="/" component={Home} />
-            <Route path="/TodoPage" component={() => <TodoPage authorized={checklogin}  />} />
+            <Route path="/TodoPage" component={() => <TodoPage authorized={checklogin} />} />
             <Route path="/AdminBoard" component={AdminBoard} />
             <Route path="/Login" component={Login} />
             <Route path="/register" component={Register} />

@@ -14,28 +14,10 @@ const faGooglePlusGIcon = <FontAwesomeIcon icon={faGooglePlusG} />
 const faYoutubeIcon = <FontAwesomeIcon icon={faYoutube} />
 const faInstagramIcon = <FontAwesomeIcon icon={faInstagram} />
 
-export const MyNav = () => {
+export const MyNav = ({username}) => {
     const history = useHistory()
-    const [username, setUsername] = useState([''])
     const localToken = localStorage.getItem('authToken')
-    useEffect(() => {
-        axios.get('https://my-gs-server.herokuapp.com/api/posts/user/info',
-            {
-                headers: {
-                    authToken: localToken
-                }
-            })
-            .then((res) => {
-                if (res.status == 200) {
-                    setUsername(res.data.username)
-                    console.log(res.data)
-                }
-                else {
-                    localStorage.removeItem('authToken')
-                }
-            })
-            .catch(err => console.log(err));
-    },[])
+    
 
     const logout = () => {
         localStorage.removeItem('authToken')
@@ -44,24 +26,27 @@ export const MyNav = () => {
     }
     const [scrollY, setScrollY] = useState(0);
     const [navBg, setNavBg] = useState('my-nav-bg-white')
+    const [scrollbar, setScrollbar] = useState('my-scrollbars ml-auto my-2 my-lg-0 my-nav-scroll-visible')
     const logit = () => {
         setScrollY(window.pageYOffset)
     }
     useEffect(() => {
         function watchScroll() {
             window.addEventListener("scroll", logit);
-            if (scrollY > 20) {
+            if (scrollY > 200) {
                 setNavBg('my-nav-bg-dark')
+                setScrollbar(scrollbar + ' d-none')
             }
             else {
                 setNavBg('my-nav-bg-transparent')
+                setScrollbar('my-scrollbars ml-auto my-2 my-lg-0 my-nav-scroll-visible')
             }
         }
         watchScroll();
         return () => {
             window.removeEventListener("scroll", logit);
         };
-    });
+    },[scrollY]);
     return (
         <div>
             <div className="nav-margin"></div>
@@ -97,7 +82,7 @@ export const MyNav = () => {
                                     </>
                             }
                         </Nav>
-                        <Nav className="my-scrollbars ml-auto my-2 my-lg-0 my-nav-scroll-visible" navbarScroll>
+                        <Nav className={scrollbar} navbarScroll>
                             <Nav.Link bsPrefix='my-nav-link' href="/">Home</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">ListSanPham</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">About</Nav.Link>
