@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './css/TodoForm.css';
 import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -33,10 +33,10 @@ export const TodoForm = ({ setInputText, checkPost, setCheckPost, inputText, set
     }
     const statusHandler = (e) => {
         setStatus(e.target.value);
-        if (status == 'completed'){
+        if (status === 'completed'){
             setStatus(0)
         }
-        if (status == 'uncompleted'){
+        if (status === 'uncompleted'){
             setStatus(1)
         }
         console.log(status)

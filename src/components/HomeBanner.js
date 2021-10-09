@@ -1,9 +1,9 @@
 import React from "react";
-import { Jumbotron as Jumbo, Carousel } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { MyButton1, MyButton2 } from "./components/CustomStyle";
-import {Container, Row, Col} from 'react-bootstrap'
+import { MyButton2 } from "./components/CustomStyle";
+import { Container, Row, Col } from 'react-bootstrap'
 
 const Styles = styled.div`
 
@@ -55,7 +55,7 @@ export const HomeBanner = () => (
                 interval="5000"
             >
                 <Carousel.Item className="my-carousel-item">
-                    <img className="d-block w-100" src="/imgs/background/banner1.jpg" />
+                    <img alt='' className="d-block w-100" src="/imgs/background/banner1.jpg" />
                     <Carousel.Caption bsPrefix='my-carousel-caption'>
                         <h3>BATTLEFIELD</h3>
                         <p className='mt-md-4'>Với Engine đồ họa Frostbite, Battlefield 4 sẽ khoác lên
@@ -63,16 +63,16 @@ export const HomeBanner = () => (
                             va chạm, cháy nổ cũng như hình ảnh chân thực. Sẽ có những
                             điểm mới lạ như thủy quân hay những nhân vật nữ. Multiplayer
                             rất hoành tráng, quy mô và hấp đẫn hơn bao giờ hết.</p>
-                            <Container>
-                                <Row className='mt-md-5'>
+                        <Container>
+                            <Row className='mt-md-5'>
                                 <Col className='d-flex flex-row-reverse'><MyButton2>Chi Tiết</MyButton2></Col>
                                 <Col className='d-flex flex-row'><MyButton2>Mua Ngay</MyButton2></Col>
-                                </Row>
-                            </Container>
+                            </Row>
+                        </Container>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="my-carousel-item">
-                    <img className="d-block w-100" src="/imgs/background/banner2.jpg" />
+                    <img alt='' className="d-block w-100" src="/imgs/background/banner2.jpg" />
                     <Carousel.Caption bsPrefix='my-carousel-caption'>
                         <h3>BATTLEFIELD</h3>
                         <p className='mt-md-4'>Với Engine đồ họa Frostbite, Battlefield 4 sẽ khoác lên
@@ -80,16 +80,16 @@ export const HomeBanner = () => (
                             va chạm, cháy nổ cũng như hình ảnh chân thực. Sẽ có những
                             điểm mới lạ như thủy quân hay những nhân vật nữ. Multiplayer
                             rất hoành tráng, quy mô và hấp đẫn hơn bao giờ hết.</p>
-                            <Container>
-                                <Row className='mt-md-5'>
+                        <Container>
+                            <Row className='mt-md-5'>
                                 <Col className='d-flex flex-row-reverse'><MyButton2>Chi Tiết</MyButton2></Col>
                                 <Col className='d-flex flex-row'><MyButton2>Mua Ngay</MyButton2></Col>
-                                </Row>
-                            </Container>
+                            </Row>
+                        </Container>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="my-carousel-item">
-                    <img className="d-block w-100" src="/imgs/background/banner3.jpg" />
+                    <img alt='' className="d-block w-100" src="/imgs/background/banner3.jpg" />
                     <Carousel.Caption bsPrefix='my-carousel-caption'>
                         <h3>BATTLEFIELD</h3>
                         <p className='mt-md-4'>Với Engine đồ họa Frostbite, Battlefield 4 sẽ khoác lên
@@ -97,12 +97,12 @@ export const HomeBanner = () => (
                             va chạm, cháy nổ cũng như hình ảnh chân thực. Sẽ có những
                             điểm mới lạ như thủy quân hay những nhân vật nữ. Multiplayer
                             rất hoành tráng, quy mô và hấp đẫn hơn bao giờ hết.</p>
-                            <Container>
-                                <Row className='mt-md-5'>
+                        <Container>
+                            <Row className='mt-md-5'>
                                 <Col className='d-flex flex-row-reverse'><MyButton2>Chi Tiết</MyButton2></Col>
                                 <Col className='d-flex flex-row'><MyButton2>Mua Ngay</MyButton2></Col>
-                                </Row>
-                            </Container>
+                            </Row>
+                        </Container>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

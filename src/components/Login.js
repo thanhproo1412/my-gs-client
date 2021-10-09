@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 export const Login = () => {
 
     const history = useHistory()
-    const getToken = localStorage.getItem('authToken')
+    // const getToken = localStorage.getItem('authToken')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const getUsername = event => {

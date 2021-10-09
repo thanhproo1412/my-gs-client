@@ -1,0 +1,41 @@
+.about-background{
+  display: block;
+  position: relative;
+  height: 60vh;
+}
+.about-background img{
+  height: 56vh;
+  top:0;
+  position: absolute;
+  width:100vw;
+}
+.about-background .about-title{
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  font-size: 3.5em;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  text-transform: uppercase;
+}
+.about-page{
+  background: rgb(243, 243, 243);
+  padding-bottom: 3em;
+}
+.about-sesion-content{
+  background: white;
+  box-shadow: 0 0 10px rgb(128, 128, 128);
+  padding: 2.5em;
+  color:rgb(82, 82, 82);
+  margin-top: 1em;
+  font-size: .9em;
+}
+.about-sesion-content a{
+  color: #0011ff;
+}
+.about-sesion-content p span{
+  text-decoration: line-through;
+}
+.yellow-text{
+  color: #ffc311;
+}

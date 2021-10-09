@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/NavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faTwitch, faGooglePlusG, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
 const faFacebookFIcon = <FontAwesomeIcon icon={faFacebookF} />
@@ -14,11 +13,8 @@ const faGooglePlusGIcon = <FontAwesomeIcon icon={faGooglePlusG} />
 const faYoutubeIcon = <FontAwesomeIcon icon={faYoutube} />
 const faInstagramIcon = <FontAwesomeIcon icon={faInstagram} />
 
-export const MyNav = ({username}) => {
+export const MyNav = ({ username }) => {
     const history = useHistory()
-    const localToken = localStorage.getItem('authToken')
-    
-
     const logout = () => {
         localStorage.removeItem('authToken')
         history.push('/login')
@@ -46,7 +42,7 @@ export const MyNav = ({username}) => {
         return () => {
             window.removeEventListener("scroll", logit);
         };
-    },[scrollY]);
+    }, [scrollY]);
     return (
         <div>
             <div className="nav-margin"></div>
@@ -73,6 +69,7 @@ export const MyNav = ({username}) => {
                                     <>
                                         <NavDropdown bsPrefix='my-nav-link my-nav-dropdown' title={username} id="navbarScrollingDropdown">
                                             <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
+                                            <NavDropdown.Item href="/adminboard">Bảng Điều Khiển</NavDropdown.Item>
                                         </NavDropdown>
                                     </>
                                     :
@@ -85,11 +82,11 @@ export const MyNav = ({username}) => {
                         <Nav className={scrollbar} navbarScroll>
                             <Nav.Link bsPrefix='my-nav-link' href="/">Home</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">ListSanPham</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">About</Nav.Link>
+                            <Nav.Link bsPrefix='my-nav-link' href="/about">About</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Forum</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Comunity</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Contact</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Pages</Nav.Link>
+                            <Nav.Link bsPrefix='my-nav-link' href="/contact">Contact</Nav.Link>
+                            <Nav.Link bsPrefix='my-nav-link' href="/adminboard">Pages</Nav.Link>
                             <NavDropdown bsPrefix='my-nav-link my-nav-dropdown' title='More info' id="navbarScrollingDropdown">
                                 <NavDropdown.Item href="/ListSanPham">Action</NavDropdown.Item>
                                 <NavDropdown.Divider />

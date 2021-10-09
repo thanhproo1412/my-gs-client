@@ -10,25 +10,22 @@ export const Todo = () => {
     const [todos, setTodos] = useState([])
     const [status, setStatus] = useState('all')
     const [checkPost, setCheckPost] = useState(0)
-    const localToken = localStorage.getItem('authToken')
-
-    // const [filteredTodos, setFilteredTodos] = useState([])
-
-    const getTodo = () => {
-        axios.get('https://my-gs-server.herokuapp.com/api/posts/todos',
-            {
-                headers: {
-                    "authToken": localToken
-                }
-            }
-        )
-            .then(res => {
-                setTodos(res.data);
-            })
-            .catch(error => alert(error));
-    }
 
     useEffect(() => {
+        const localToken = localStorage.getItem('authToken')
+        const getTodo = () => {
+            axios.get('https://my-gs-server.herokuapp.com/api/posts/todos',
+                {
+                    headers: {
+                        "authToken": localToken
+                    }
+                }
+            )
+                .then(res => {
+                    setTodos(res.data);
+                })
+                .catch(error => alert(error));
+        }
         getTodo()
     }, [checkPost])
 
@@ -38,7 +35,7 @@ export const Todo = () => {
     return (
         <div className="todo-container">
             <TodoForm inputText={inputText} todos={todos} setCheckPost={setCheckPost} checkPost={checkPost}
-                setInputText={setInputText} setStatus={setStatus} />
+                setInputText={setInputText} setStatus={setStatus} status={status} />
             <TodoList todos={todos} checkPost={checkPost} setCheckPost={setCheckPost} />
         </div>
     );

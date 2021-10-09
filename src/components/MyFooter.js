@@ -1,16 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Navbar, NavDropdown, Nav } from 'react-bootstrap';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faTwitch, faGooglePlusG, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const faFacebookFIcon = <FontAwesomeIcon icon={faFacebookF} />
 const faTwitterIcon = <FontAwesomeIcon icon={faTwitter} />
-const faTwitchIcon = <FontAwesomeIcon icon={faTwitch} />
-const faGooglePlusGIcon = <FontAwesomeIcon icon={faGooglePlusG} />
 const faYoutubeIcon = <FontAwesomeIcon icon={faYoutube} />
-const faInstagramIcon = <FontAwesomeIcon icon={faInstagram} />
 
 export const MyFooter = () => {
 
@@ -24,13 +20,13 @@ export const MyFooter = () => {
                     <img src="https://digitalupgrade.com/images/footerlogo.png" width="910" height="173" alt="Footer Logo" class="img-fluid" />
                 </div>
                 <div id="socials-bar">
-                    <a href="https://www.facebook.com/dupgrade/" target="_blank" rel="noopener" title="Facebook">
+                    <a href="https://www.facebook.com/dupgrade/" target="_blank" rel="noopener noreferrer" title="Facebook">
                         {faFacebookFIcon}
                     </a>
-                    <a href="https://twitter.com/digital_upgrade?lang=en" target="_blank" rel="noopener" title="Twitter">
+                    <a href="https://twitter.com/digital_upgrade?lang=en" target="_blank" rel="noopener noreferrer" title="Twitter">
                         {faTwitterIcon}
                     </a>
-                    <a href="https://www.linkedin.com/company/digital-upgrade" target="_blank" rel="noopener" title="LinkedIn">
+                    <a href="https://www.linkedin.com/company/digital-upgrade" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                         {faYoutubeIcon}
                     </a>
                 </div>

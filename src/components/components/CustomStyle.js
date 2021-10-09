@@ -23,14 +23,28 @@ export const MyButton1 = (props) => {
 export const MyButton1Active = (props) => {
     return (
         <Ripples color="rgba(255,255,255,0.5)" during={650}>
-            <Button className='my-button-1 my-button-active'>{props.children}</Button>
+            <Button className='my-button-1 my-button-active' onClick={props.onClick}>{props.children}</Button>
         </Ripples>
     );
 }
 export const MyButton2 = (props) => {
     return (
         <Ripples>
-            <button className='my-button-2 ex-tb'>{props.children}</button>
+            <button className='my-button-2 ex-tb' onClick={props.onClick}>{props.children}</button>
+        </Ripples>
+    )
+};
+export const MyButton3 = (props) => {
+    return (
+        <Ripples>
+            <button className='my-button-3' onClick={props.onClick}>{props.children}</button>
+        </Ripples>
+    )
+};
+export const MyButton4 = (props) => {
+    return (
+        <Ripples>
+            <button className='my-button-4' onClick={props.onClick}>{props.children}</button>
         </Ripples>
     )
 };
@@ -69,7 +83,7 @@ export const BackToTopArrow = () => {
         </div>
     )
 }
-export const YoutubeVideo169 = ({youtubeLink}) => {
+export const YoutubeVideo169 = ({ youtubeLink }) => {
     return (
         <div class="youtube-video-16-9">
             <iframe class="video" src={youtubeLink}

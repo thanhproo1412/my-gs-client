@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './css/TodoItem.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
@@ -37,7 +37,7 @@ export const TodoItem = ({ completed, text, key, id, checkPost, setCheckPost }) 
     return (
         <div className="todo-container">
             <div className='todo-list'>
-                <li className={`todo-item ${(completed == 0) ? ' completed' : ' '}`}>{text}{key}</li>
+                <li className={`todo-item ${(completed === 0) ? ' completed' : ' '}`}>{text}{key}</li>
                 <button onClick={completeHandler} className='complete-btn'>
                     <FontAwesomeIcon icon={faCheckCircle} />
                 </button>

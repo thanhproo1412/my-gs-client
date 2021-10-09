@@ -9,7 +9,9 @@ import { MyFooter } from './components/MyFooter';
 import { Layout } from './components/Layout';
 import { Login } from './components/Login';
 import { Register } from './components/Register';
-import { AdminBoard } from './components/AdminBoard';
+import { Adminboard } from './components/Adminboard';
+import { Contact } from './components/Contact';
+import { About } from './components/About';
 // import { Jumbotron } from './components/Jumbotron';
 import ItemDetail from './ItemDetail';
 import { BackToTopArrow } from './components/components/CustomStyle';
@@ -40,23 +42,29 @@ const App = () => {
       .catch(err => console.log(err));
   }, [])
 
+  let HideHeader = window.location.pathname === '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyNav username={username}/>
+  let HideFooter = window.location.pathname === '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyFooter />
+
   return (
     <React.Fragment style={{ margin: '0px', padding: '0px' }}>
       <Layout style={{ margin: '0px', padding: '0px', marginTop: '160px' }}>
         <Router style={{ margin: '0px', padding: '0px' }}>
-          <MyNav username={username} />
+             {HideHeader}
+          {/* <MyNav username={username} /> */}
           <Switch style={{ margin: '0px', padding: '0px' }}>
             <Route style={{ margin: '0px', padding: '0px' }} exact path="/" component={Home} />
             <Route path="/TodoPage" component={() => <TodoPage authorized={true} />} />
-            <Route path="/AdminBoard" component={AdminBoard} />
+            <Route path="/adminboard" component={Adminboard} />
             <Route path="/Login" component={Login} />
             <Route path="/register" component={Register} />
             <Route exact path="/ListSanPham" component={ListSanPham} />
             <Route path="/ListSanPham/:id" component={ItemDetail} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/about" component={About} />
             <Route component={NoSite} />
           </Switch>
-        </Router>
-        <MyFooter />
+            {HideFooter}
+        </Router>        
         <BackToTopArrow />
       </Layout>
     </React.Fragment>
