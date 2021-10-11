@@ -1,5 +1,6 @@
 {
   "name": "my-genshin-web",
+  "engine": { "node": "16.11.0", "npm": "8.0.0" },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,6 +46,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "engine": { "node": "16.11.0", "npm": "8.0.0" }
+  }
 }
