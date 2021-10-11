@@ -7,7 +7,7 @@ import { ItemCard3 } from './components/ItemCard3'
 export const About = () => {
 
     return (
-        <>
+        <React.Fragment>
             <div className="about-page">
                 <div className="about-background">
                     <img src='http://innetvn.com/vnt_upload/weblink/employment-screening-company-about.jpg' alt='' />
@@ -66,6 +66,6 @@ export const About = () => {
                 </Container>
 
             </div>
-        </>
+        </React.Fragment>
     );
 }

@@ -66,17 +66,17 @@ export const MyNav = ({ username }) => {
                             <Nav.Link bsPrefix='mr-auto my-nav-social-link' href="/">{faInstagramIcon}</Nav.Link>
                             {
                                 localStorage.getItem('authToken') ?
-                                    <>
+                                    <div>
                                         <NavDropdown bsPrefix='my-nav-link my-nav-dropdown' title={username} id="navbarScrollingDropdown">
                                             <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
                                             <NavDropdown.Item href="/adminboard">Bảng Điều Khiển</NavDropdown.Item>
                                         </NavDropdown>
-                                    </>
+                                    </div>
                                     :
-                                    <>
+                                    <div>
                                         <Nav.Link bsPrefix='my-nav-signup-link' href="/register">Đăng kí</Nav.Link>
                                         <Nav.Link bsPrefix='my-nav-login-link' href="/login">Đăng nhập</Nav.Link>
-                                    </>
+                                    </div>
                             }
                         </Nav>
                         <Nav className={scrollbar} navbarScroll>
