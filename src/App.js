@@ -17,7 +17,6 @@ import ItemDetail from './ItemDetail';
 import { BackToTopArrow } from './components/components/CustomStyle';
 import axios from 'axios';
 
-
 const App = () => {
   const [checklogin, setChecklogin] = useState();
   const localToken = localStorage.getItem('authToken')
@@ -30,7 +29,7 @@ const App = () => {
         }
       })
       .then((res) => {
-        if (res.status == 200) {
+        if (res.status === 200) {
           setUsername(res.data.username)
           setChecklogin(true)
         }
@@ -41,10 +40,8 @@ const App = () => {
       })
       .catch(err => console.log(err));
   }, [])
-
   let HideHeader = window.location.pathname === '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyNav username={username}/>
   let HideFooter = window.location.pathname === '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyFooter />
-
   return (
     <React.Fragment style={{ margin: '0px', padding: '0px' }}>
       <Layout style={{ margin: '0px', padding: '0px', marginTop: '160px' }}>

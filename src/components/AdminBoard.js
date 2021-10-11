@@ -30,8 +30,10 @@ export const Adminboard = () => {
                 <div className='sidebar-toggle'>
                     <div className='sidebar-brand'>
                         <h3 className='text-center'>
-                            <span>{faAccusoftIcon}</span>
-                            <span>Adminboard</span>
+                            <a href='/'>
+                                <span>{faAccusoftIcon}</span>
+                                <span>GS.GG</span>
+                            </a>
                         </h3>
                     </div>
                     <div className='sidebar-menu'>
