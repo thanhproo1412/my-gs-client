@@ -1,6 +1,8 @@
 {
   "name": "my-genshin-web",
-  "engine": { "node": "16.11.0", "npm": "8.0.0" },
+  "engines": {
+    "node": "16.x" 
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
