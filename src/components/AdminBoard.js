@@ -24,7 +24,7 @@ const faAddressBookIcon = <FontAwesomeIcon icon={faAddressBook} />
 export const Adminboard = () => {
 
     return (
-        <div>
+        <React.Fragment>
             <div>
                 <input type="checkbox" id='nav-toggle' />
                 <div className='sidebar-toggle'>
@@ -208,6 +208,6 @@ export const Adminboard = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </React.Fragment>
     );
 }

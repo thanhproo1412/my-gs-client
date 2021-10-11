@@ -1,7 +1,7 @@
 {
   "name": "my-genshin-web",
   "engines": {
-    "node": "16.x"
+    "node": "14.x"
   },
   "version": "0.1.0",
   "private": true,
@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "web-vitals": "^2.1.1"
   }
 }
