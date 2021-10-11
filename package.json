@@ -45,5 +45,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhproo1412/my-gs-client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanhproo1412/my-gs-client/issues"
+  },
+  "homepage": "https://github.com/thanhproo1412/my-gs-client#readme",
+  "description": ""
 }
