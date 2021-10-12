@@ -4,17 +4,17 @@ import Home from './Home';
 import { TodoPage } from './TodoPage';
 import { NoSite } from './NoSite';
 import { ListSanPham } from './ListSanPham';
-import { MyNav } from './Components/MyNav';
-import { MyFooter } from './Components/MyFooter';
-import { Layout } from './Components/Layout';
-import { Login } from './Components/Login';
-import { Register } from './Components/Register';
-import { Contact } from './Components/Contact';
-import { About } from './Components/About';
-import { Adminboard } from './Components/Adminboard';
+import { MyNav } from './components/MyNav';
+import { MyFooter } from './components/MyFooter';
+import { Layout } from './components/Layout';
+import { Login } from './components/Login';
+import { Register } from './components/Register';
+import { Contact } from './components/Contact';
+import { About } from './components/About';
+import { Adminboard } from './components/Adminboard';
 // import { Jumbotron } from './components/Jumbotron';
 import ItemDetail from './ItemDetail';
-import { BackToTopArrow } from './Components/components/CustomStyle';
+import { BackToTopArrow } from './components/components/CustomStyle';
 import axios from 'axios';
 
 const App = () => {
