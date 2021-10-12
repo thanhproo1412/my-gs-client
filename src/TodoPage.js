@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Todo } from './components/Todo';
+import { Todo } from './Components/Todo';
 import { Redirect } from 'react-router-dom'
 
 export const TodoPage = ({ authorized }) => {
