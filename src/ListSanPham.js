@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css'
-import { MoviesList } from './components/MoviesList';
-import DanhSachSanPham from './components/DanhSachSanPham';
-import { MovieProvider } from './components/MovieContext';
+import { MoviesList } from './Components/MoviesList';
+import DanhSachSanPham from './Components/DanhSachSanPham';
+import { MovieProvider } from './Components/MovieContext';
 
 export const ListSanPham = () => {
     return (

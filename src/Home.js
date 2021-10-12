@@ -1,11 +1,11 @@
 import React from 'react';
-import { MovieProvider } from './components/MovieContext';
-import { NewMovie } from './components/NewMovie';
-import { AddMovie } from './components/AddMovie';
-import { MoviesList } from './components/MoviesList';
-import { HomeBanner } from './components/HomeBanner';
-import { HomeIntro } from './components/HomeIntro';
-import { GameListProvider } from './components/GameListContext';
+import { MovieProvider } from './Components/MovieContext';
+import { NewMovie } from './Components/NewMovie';
+import { AddMovie } from './Components/AddMovie';
+import { MoviesList } from './Components/MoviesList';
+import { HomeBanner } from './Components/HomeBanner';
+import { HomeIntro } from './Components/HomeIntro';
+import { GameListProvider } from './Components/GameListContext';
 
 const Home = () => {
 
