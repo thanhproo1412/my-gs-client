@@ -9,7 +9,7 @@ import { MyFooter } from './components/MyFooter';
 import { Layout } from './components/Layout';
 import { Login } from './components/Login';
 import { Register } from './components/Register';
-import { Adminboard } from './components/AdminBoard';
+import { Adminboard } from './components/Adminboard';
 import { Contact } from './components/Contact';
 import { About } from './components/About';
 // import { Jumbotron } from './components/Jumbotron';
