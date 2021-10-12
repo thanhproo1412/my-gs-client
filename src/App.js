@@ -11,7 +11,7 @@ import { Login } from './Components/Login';
 import { Register } from './Components/Register';
 import { Contact } from './Components/Contact';
 import { About } from './Components/About';
-import { Adminboard } from './Components/AdminBoard';
+import { Adminboard } from './Components/Adminboard';
 // import { Jumbotron } from './components/Jumbotron';
 import ItemDetail from './ItemDetail';
 import { BackToTopArrow } from './Components/components/CustomStyle';
