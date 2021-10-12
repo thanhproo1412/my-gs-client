@@ -32,7 +32,7 @@ export const Adminboard = () => {
                         <h3 className='text-center'>
                             <a href='/'>
                                 <span>{faAccusoftIcon}</span>
-                                <span>GS.GG</span>
+                                <span>Home</span>
                             </a>
                         </h3>
                     </div>
