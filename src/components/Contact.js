@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './css/Contact.css';
-import { Container, Form, Row, Col, Button } from 'react-bootstrap/'
+import { Container, Form, Row, Col } from 'react-bootstrap/'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MyButton4 } from './components/CustomStyle'
 

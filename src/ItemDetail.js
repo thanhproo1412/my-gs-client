@@ -7,21 +7,19 @@ function ItemDetail( { match } ) {
     const APP_KEY = '08e7958e5474ed04af9bc444b59c1600';
 
     const [rescipe, setRescipe] = useState([]);
-
-    useEffect(() => {
-        getRecipe();
-        console.log(match)
-    }, []);    // khi 'query' thay đổi thì sẽ getRecipes()
-
     const [item, setItem] = useState([]);
 
-    const getRecipe = async () => {
-        // const response = await fetch(`https://api.edamam.com/api/recipes/v2/${match.params.id}?type=public&app_id=${APP_ID}&app_key=${APP_KEY}`);
-        const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`);
-        const items = await response.json();
-        setRescipe(items.hits.rescipe.label);
-        console.log(rescipe);
-    }
+    useEffect(() => {
+        const getRecipe = async () => {
+            // const response = await fetch(`https://api.edamam.com/api/recipes/v2/${match.params.id}?type=public&app_id=${APP_ID}&app_key=${APP_KEY}`);
+            const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`);
+            const items = await response.json();
+            setRescipe(items.hits.rescipe.label);
+            console.log(rescipe);
+        }
+        getRecipe();
+    }, []);    // khi 'query' thay đổi thì sẽ getRecipes()
+
 
     return (
         <div>

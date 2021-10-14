@@ -39,26 +39,26 @@ export const Adminboard = () => {
                     <div className='sidebar-menu'>
                         <ul>
                             <li className='sidebar-item'>
-                                <a href='#' className='active'><span>{faUserIcon}</span>
+                                <a href='/#' className='active'><span>{faUserIcon}</span>
                                     <span>Profile</span></a>
                             </li>
                             <li className='sidebar-item'>
-                                <a href='#' className=''><span>{faStoreIcon}</span>
+                                <a href='/#' className=''><span>{faStoreIcon}</span>
                                     <span>Store</span></a>
                             </li><li className='sidebar-item'>
-                                <a href='#' className=''><span>{faClipboardListIcon}</span>
+                                <a href='/#' className=''><span>{faClipboardListIcon}</span>
                                     <span>Project</span></a>
                             </li>
                             <li className='sidebar-item'>
-                                <a href='#' className=''><span>{faToolboxIcon}</span>
+                                <a href='/#' className=''><span>{faToolboxIcon}</span>
                                     <span>Settings</span></a>
                             </li>
                             <li className='sidebar-item'>
-                                <a href='#' className=''><span>{faIglooIcon}</span>
+                                <a href='/#' className=''><span>{faIglooIcon}</span>
                                     <span>Link</span></a>
                             </li>
                             <li className='sidebar-item'>
-                                <a href='#' className=''><span>{faIglooIcon}</span>
+                                <a href='/#' className=''><span>{faIglooIcon}</span>
                                     <span>Link</span></a>
                             </li>
                         </ul>

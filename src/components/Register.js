@@ -59,13 +59,13 @@ export const Register = () => {
                         <input value={password} onChange={getPassword} type="password" name="password" />
                     </div>
                     <div className="form-button-right">
-                        <a href="#" className="login-form-link">Quên mật khẩu?</a>
+                        <a href='/#' className="login-form-link">Quên mật khẩu?</a>
                     </div>
                     <div className="form-button-center">
                         <div>
                             <MyButton1 onClick={register}>Đăng kí</MyButton1>
                         </div>
-                        <a href="#" className="login-form-link">Đăng nhập</a>
+                        <a href='/#' className="login-form-link">Đăng nhập</a>
                     </div>
                 </form>
             </Container>

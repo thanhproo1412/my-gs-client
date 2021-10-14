@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './css/About.css';
-import { Container, Form, Row, Col, Button } from 'react-bootstrap/'
+import { Container, Row, Col } from 'react-bootstrap/'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ItemCard3 } from './components/ItemCard3'
 
@@ -33,7 +33,7 @@ export const About = () => {
                             <span className="yellow-text">Lacus sed turpis tincidunt id aliquet
                                 risus feugiat in diam sit at ultrices. Nec tincidunt praesent semper
                                 feugiat nibh sed pulvinar ornare aenean.</span></p>
-                        <a className='mb-4' href='#'>View more</a>
+                        <a href='/#' className='mb-4' >View more</a>
                         <p>Purus non enim praesent elementum facilisis.
                             <span className='text-decoration-line-through'>Neque vitae tempus quam
                                 pellentesque. Facilisis mauris s
@@ -50,7 +50,7 @@ export const About = () => {
                             <span className="yellow-text">Lacus sed turpis tincidunt id aliquet
                                 risus feugiat in diam sit at ultrices. Nec tincidunt praesent semper
                                 feugiat nibh sed pulvinar ornare aenean.</span></p>
-                        <a className='mb-4' href='#'>View more</a>
+                        <a className='mb-4' href='/#'>View more</a>
                         <Row>
                             <Col md={4}>
                                 <ItemCard3 name='something' itemLink='link' itemCardUrl='https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg' itemCardHoverInfo='info' />

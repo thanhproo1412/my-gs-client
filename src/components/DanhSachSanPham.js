@@ -30,6 +30,7 @@ function DanhSachSanPham() {
             setRescipes(items.hits);
             console.log(rescipes);
             setItem(items.label);
+            console.log(item)
         }
         getRecipes();
     }, [query]);    // khi 'query' thay đổi thì sẽ getRecipes()

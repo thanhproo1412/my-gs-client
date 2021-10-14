@@ -20,9 +20,9 @@ import axios from 'axios';
 
 const App = () => {
   const [checklogin, setChecklogin] = useState();
-  const localToken = localStorage.getItem('authToken')
   const [username, setUsername] = useState([''])
   useEffect(async () => {
+    const localToken = localStorage.getItem('authToken')
     await axios.get('https://my-gs-server.herokuapp.com/api/posts/user/info',
       {
         headers: {
@@ -42,15 +42,15 @@ const App = () => {
       .catch(err => console.log(err));
   }, [])
 
-let HideFooter = window.location.pathname === '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyFooter />
+  let HideFooter = window.location.pathname === '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyFooter />
 
-  let HideHeader = window.location.pathname === '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyNav username={username}/>
-  
+  let HideHeader = window.location.pathname === '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyNav username={username} />
+
   return (
     <React.Fragment style={{ margin: '0px', padding: '0px' }}>
       <Layout style={{ margin: '0px', padding: '0px', marginTop: '160px' }}>
         <Router style={{ margin: '0px', padding: '0px' }}>
-             {HideHeader}
+          {HideHeader}
           {/* <MyNav username={username} /> */}
           <Switch style={{ margin: '0px', padding: '0px' }}>
             <Route style={{ margin: '0px', padding: '0px' }} exact path="/" component={Home} />
@@ -65,8 +65,8 @@ let HideFooter = window.location.pathname === '/adminboard' && '/Login' && '/Con
             <Route path="/news" component={News} />
             <Route component={NoSite} />
           </Switch>
-            {HideFooter}
-        </Router>        
+          {HideFooter}
+        </Router>
         <BackToTopArrow />
       </Layout>
     </React.Fragment>
