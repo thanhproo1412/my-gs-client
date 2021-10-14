@@ -12,6 +12,7 @@ import { Register } from './components/Register';
 import { Contact } from './components/Contact';
 import { Adminboard } from './components/Adminboard';
 import { About } from './components/About';
+import { News } from './components/News';
 // import { Jumbotron } from './components/Jumbotron';
 import ItemDetail from './ItemDetail';
 import { BackToTopArrow } from './components/components/CustomStyle';
@@ -61,6 +62,7 @@ let HideFooter = window.location.pathname === '/adminboard' && '/Login' && '/Con
             <Route path="/ListSanPham/:id" component={ItemDetail} />
             <Route path="/contact" component={Contact} />
             <Route path="/about" component={About} />
+            <Route path="/news" component={News} />
             <Route component={NoSite} />
           </Switch>
             {HideFooter}

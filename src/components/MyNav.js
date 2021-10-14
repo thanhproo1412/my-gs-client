@@ -82,10 +82,10 @@ export const MyNav = ({ username }) => {
                         <Nav className={scrollbar} navbarScroll>
                             <Nav.Link bsPrefix='my-nav-link' href="/">Home</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">ListSanPham</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/about">About</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Forum</Nav.Link>
+                            <Nav.Link bsPrefix='my-nav-link' href="/about">Về chúng tôi</Nav.Link>
+                            <Nav.Link bsPrefix='my-nav-link' href="/tintuc">Tin tức</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Comunity</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/contact">Contact</Nav.Link>
+                            <Nav.Link bsPrefix='my-nav-link' href="/contact">Liên hệ</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/adminboard">Pages</Nav.Link>
                             <NavDropdown bsPrefix='my-nav-link my-nav-dropdown' title='More info' id="navbarScrollingDropdown">
                                 <NavDropdown.Item href="/ListSanPham">Action</NavDropdown.Item>
