@@ -83,7 +83,7 @@ export const MyNav = ({ username }) => {
                             <Nav.Link bsPrefix='my-nav-link' href="/">Home</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">ListSanPham</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/about">Về chúng tôi</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/tintuc">Tin tức</Nav.Link>
+                            <Nav.Link bsPrefix='my-nav-link' href="/news">Tin tức</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Comunity</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/contact">Liên hệ</Nav.Link>
                             <Nav.Link bsPrefix='my-nav-link' href="/adminboard">Pages</Nav.Link>

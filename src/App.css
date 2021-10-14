@@ -45,7 +45,7 @@ body {
   align-items: center;
   min-width: 40%;
   margin:1em;
-  margin-top:8em;
+  margin-top: 1em;
 }
 
 .search-form {
@@ -118,4 +118,13 @@ body {
 .myLink:hover{
   color :rgb(255, 146, 219);
   text-decoration: none;
+}
+.no-site{
+  height: 100vh;
+  padding: 3em;
+  text-align: center;
+  padding-top: 6em;
+}
+.no-site h1{
+  font-size: 3em;
 }

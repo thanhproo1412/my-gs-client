@@ -42,8 +42,15 @@ function DanhSachSanPham() {
 
     return (
         <Container>
-            <MyButton1 className='btn btn-primary btn-sm'>All Game</MyButton1>
-            <MyButton2 className='btn btn-primary btn-sm'>All Game</MyButton2>
+            <div className="d-flex justify-content-around mt-5 mb-5">
+                <MyButton1 className='btn btn-primary btn-sm'>Tất cả</MyButton1>
+                <MyButton2 className='btn btn-primary btn-sm'>Thịt gà</MyButton2>
+                <MyButton2 className='btn btn-primary btn-sm'>thịt heo</MyButton2>
+                <MyButton2 className='btn btn-primary btn-sm'>thịt bò</MyButton2>
+                <MyButton2 className='btn btn-primary btn-sm'>rau củ quả</MyButton2>
+                <MyButton2 className='btn btn-primary btn-sm'>món tráng miệng</MyButton2>
+                <MyButton2 className='btn btn-primary btn-sm'>thức uống</MyButton2>
+            </div>
             <div>
                 <div>
                     <form className="search-form" onSubmit={getSearch}>

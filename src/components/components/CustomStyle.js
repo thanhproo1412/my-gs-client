@@ -93,3 +93,17 @@ export const YoutubeVideo169 = ({ youtubeLink }) => {
         </div>
     )
 };
+export const Image169 = ({ src, alt }) => {
+    return (
+        <div class="image-16-9">
+            <img src={src} alt={alt}/>
+        </div>
+    )
+};
+export const ImageSquare = ({ src, alt }) => {
+    return (
+        <div class="image-square">
+            <img src={src} alt={alt}/>
+        </div>
+    )
+};
