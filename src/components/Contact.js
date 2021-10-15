@@ -10,7 +10,7 @@ export const Contact = () => {
     return (
         <React.Fragment>
             <div className="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.6442085895914!2d106.73223882915308!3d10.843660316675725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527daf11916bf%3A0xe6c2b66b0fd1205c!2zNTIvMTcgS2hhIFbhuqFuIEPDom4sIEhp4buHcCBCw6xuaCBDaMOhbmgsIFRo4bunIMSQ4bupYywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2sus!4v1633772359312!5m2!1svi!2sus" allowfullscreen="" loading="lazy"></iframe>
+                <iframe title='video' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.6442085895914!2d106.73223882915308!3d10.843660316675725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527daf11916bf%3A0xe6c2b66b0fd1205c!2zNTIvMTcgS2hhIFbhuqFuIEPDom4sIEhp4buHcCBCw6xuaCBDaMOhbmgsIFRo4bunIMSQ4bupYywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2sus!4v1633772359312!5m2!1svi!2sus" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <Container className='mt-5 mb-4'>
                 <div className="contact-form-title">

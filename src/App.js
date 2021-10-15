@@ -30,6 +30,7 @@ const App = () => {
         }
       })
       .then((res) => {
+        console.log(checklogin)
         if (res.status === 200) {
           setUsername(res.data.username)
           setChecklogin(true)
