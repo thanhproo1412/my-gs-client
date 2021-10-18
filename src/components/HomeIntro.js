@@ -32,13 +32,13 @@ export const HomeIntro = () => {
 
         </Row>
         <Container>
-          <Row className="categories">
+          <div className="home-intro-categories">
             <MyButton1Active>All</MyButton1Active>
             <MyButton1>PLAY STATION 4</MyButton1>
             <MyButton1>XBOX ONE</MyButton1>
             <MyButton1>IOS</MyButton1>
             <MyButton1>ANDROID</MyButton1>
-          </Row>
+          </div>
         </Container>
         <Row>
           {gameList.map(game => (

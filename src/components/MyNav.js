@@ -44,30 +44,103 @@ export const MyNav = ({ username }) => {
         };
     }, [scrollY]);
     return (
-        <div>
-            <div className="nav-margin"></div>
-            <Navbar className={navBg} bg="dark" variant="dark" expand="lg" fixed='top'>
+        // <div>
+        //     <div className="nav-margin"></div>
+        //     <Navbar className={navBg} bg="dark" variant="dark" expand="lg" fixed='top'>
+        //         <Container fluid>
+        //             <Navbar.Brand className='my-nav-brand' href="/">GS
+        //                 <span style={{ color: '#FFC411C7' }}>.GG</span>
+        //                 <img src='/imgs/logo/gi-logo.png' alt="logo" />
+        //             </Navbar.Brand>
+        //             <Navbar.Toggle aria-controls="navbarScroll" />
+        //             <Navbar.Collapse className='my-nav-collapse flex-column' id="navbarScroll">
+        //                 <Nav className='my-nav-collapse-flex'>
+        //                     <Navbar.Brand className='mt-4 my-nav-brand my-collapse-none text-center' href="/">GS<span style={{ color: 'red', }}>.GG</span></Navbar.Brand>
+        //                 </Nav>
+        //                 <Nav navbarScroll className="mt-4 mb-4 ml-auto my-2 my-lg-0 my-Nav align-items-center d-flex flex-row justify-content-end">
+        //                     <Nav.Link href="/" bsPrefix='my-nav-social-link'>{faFacebookFIcon}</Nav.Link>
+        //                     <Nav.Link bsPrefix='my-nav-social-link' href="/">{faTwitterIcon}</Nav.Link>
+        //                     <Nav.Link bsPrefix='my-nav-social-link' href="/">{faTwitchIcon}</Nav.Link>
+        //                     <Nav.Link bsPrefix='my-nav-social-link' href="/">{faGooglePlusGIcon}</Nav.Link>
+        //                     <Nav.Link bsPrefix='my-nav-social-link' href="/">{faYoutubeIcon}</Nav.Link>
+        //                     <Nav.Link bsPrefix='mr-auto my-nav-social-link' href="/">{faInstagramIcon}</Nav.Link>
+        //                     {
+        //                         localStorage.getItem('authToken') ?
+        //                             <div>
+        //                                 <NavDropdown bsPrefix='my-nav-link my-nav-dropdown' title={username} id="navbarScrollingDropdown">
+        //                                     <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
+        //                                     <NavDropdown.Item href="/adminboard">Bảng Điều Khiển</NavDropdown.Item>
+        //                                 </NavDropdown>
+        //                             </div>
+        //                             :
+        //                             <div>
+        //                                 <Nav.Link bsPrefix='my-nav-signup-link' href="/register">Đăng kí</Nav.Link>
+        //                                 <Nav.Link bsPrefix='my-nav-login-link' href="/login">Đăng nhập</Nav.Link>
+        //                             </div>
+        //                     }
+        //                 </Nav>
+        //                 <Nav className={scrollbar} navbarScroll>
+        //                     <Nav.Link bsPrefix='my-nav-link' href="/">Home</Nav.Link>
+        //                     <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Sản Phẩm</Nav.Link>
+        //                     <Nav.Link bsPrefix='my-nav-link' href="/about">Giới thiệu</Nav.Link>
+        //                     <Nav.Link bsPrefix='my-nav-link' href="/news">Tin tức</Nav.Link>
+        //                     <Nav.Link bsPrefix='my-nav-link' href="/contact">Liên hệ</Nav.Link>
+        //                     <Nav.Link bsPrefix='my-nav-link' href="/adminboard">Pages</Nav.Link>
+        //                     <NavDropdown bsPrefix='my-nav-link my-nav-dropdown' title='More info' id="navbarScrollingDropdown">
+        //                         <NavDropdown.Item href="/ListSanPham">Action</NavDropdown.Item>
+        //                         <NavDropdown.Divider />
+        //                         <NavDropdown.Item href="/ListSanPham">Another action</NavDropdown.Item>
+        //                         <NavDropdown.Divider />
+        //                         <NavDropdown.Item href="/ListSanPham">Something else here</NavDropdown.Item>
+        //                     </NavDropdown>
+        //                     <Nav.Link bsPrefix='my-nav-link' href="/TodoPage">Todo Page</Nav.Link>
+        //                 </Nav>
+        //                 <Nav className='my-nav-login-signup-collapse'>
+        //                     <Nav.Link bsPrefix='my-nav-signup-collapse' href="/">Đăng kí</Nav.Link>
+        //                     <Nav.Link bsPrefix='my-nav-login-collapse' href="/">Đăng nhập</Nav.Link>
+        //                 </Nav>
+        //                 {/* <Form className="d-flex">
+        //                     <FormControl
+        //                         type="search"
+        //                         placeholder="Search"
+        //                         className="mr-2"
+        //                         aria-label="Search"
+        //                     />
+        //                     <Button variant="outline-success">Search</Button>
+        //                 </Form> */}
+        //             </Navbar.Collapse>
+        //         </Container>
+        //     </Navbar>
+        // </div>
+
+
+        <React.Fragment>
+            <Navbar fixed='top' className='my-nav-bar' collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand className='my-nav-brand' href="/">GS
-                        <span style={{ color: '#FFC411C7' }}>.GG</span>
-                        <img src='/imgs/logo/gi-logo.png' alt="logo" />
+                    <Navbar.Brand href="#home">My Web
+                        <img alt='' height='auto' width='54px' src={process.env.PUBLIC_URL + '/imgs/logo/t1-logo.png'}/>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse className='my-nav-collapse flex-column' id="navbarScroll">
-                        <Nav className='my-nav-collapse-flex'>
-                            <Navbar.Brand className='mt-4 my-nav-brand my-collapse-none text-center' href="/">GENSHIN<span style={{ color: 'red', }}>.GG</span></Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link className='my-nav-link my-nav-link-active' href="/">Trang Chủ</Nav.Link>
+                            <Nav.Link className='my-nav-link' href="/listsanpham">Sản Phẩm</Nav.Link>
+                            <Nav.Link className='my-nav-link' href="/about">Giới thiệu</Nav.Link>
+                            <Nav.Link className='my-nav-link' href="/news">tin tức</Nav.Link>
+                            <Nav.Link className='my-nav-link' href="/contact">Liên hệ</Nav.Link>
+                            <NavDropdown bsPrefix='my-nav-dropdown' title="Dropdown" id="collasible-nav-dropdown">
+                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                            </NavDropdown>
                         </Nav>
-                        <Nav navbarScroll className="mt-4 mb-4 ml-auto my-2 my-lg-0 my-Nav align-items-center d-flex justify-content-start">
-                            <Nav.Link href="/" bsPrefix='my-nav-social-link'>{faFacebookFIcon}</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-social-link' href="/">{faTwitterIcon}</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-social-link' href="/">{faTwitchIcon}</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-social-link' href="/">{faGooglePlusGIcon}</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-social-link' href="/">{faYoutubeIcon}</Nav.Link>
-                            <Nav.Link bsPrefix='mr-auto my-nav-social-link' href="/">{faInstagramIcon}</Nav.Link>
+                        <Nav>
                             {
                                 localStorage.getItem('authToken') ?
                                     <div>
-                                        <NavDropdown bsPrefix='my-nav-link my-nav-dropdown' title={username} id="navbarScrollingDropdown">
+                                        <NavDropdown className='my-nav-dropdown-user' align='start' bsPrefix='my-nav-link my-nav-dropdown' title={username} id="navbarScrollingDropdown">
                                             <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
                                             <NavDropdown.Item href="/adminboard">Bảng Điều Khiển</NavDropdown.Item>
                                         </NavDropdown>
@@ -79,39 +152,9 @@ export const MyNav = ({ username }) => {
                                     </div>
                             }
                         </Nav>
-                        <Nav className={scrollbar} navbarScroll>
-                            <Nav.Link bsPrefix='my-nav-link' href="/">Home</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">ListSanPham</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/about">Về chúng tôi</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/news">Tin tức</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/ListSanPham">Comunity</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/contact">Liên hệ</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-link' href="/adminboard">Pages</Nav.Link>
-                            <NavDropdown bsPrefix='my-nav-link my-nav-dropdown' title='More info' id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="/ListSanPham">Action</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="/ListSanPham">Another action</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="/ListSanPham">Something else here</NavDropdown.Item>
-                            </NavDropdown>
-                            <Nav.Link bsPrefix='my-nav-link' href="/TodoPage">Todo Page</Nav.Link>
-                        </Nav>
-                        <Nav className='my-nav-login-signup-collapse'>
-                            <Nav.Link bsPrefix='my-nav-signup-collapse' href="/">Đăng kí</Nav.Link>
-                            <Nav.Link bsPrefix='my-nav-login-collapse' href="/">Đăng nhập</Nav.Link>
-                        </Nav>
-                        {/* <Form className="d-flex">
-                            <FormControl
-                                type="search"
-                                placeholder="Search"
-                                className="mr-2"
-                                aria-label="Search"
-                            />
-                            <Button variant="outline-success">Search</Button>
-                        </Form> */}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </div>
+        </React.Fragment>
     )
 }
