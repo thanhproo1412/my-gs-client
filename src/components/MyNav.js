@@ -117,7 +117,7 @@ export const MyNav = ({ username }) => {
         <React.Fragment>
             <Navbar fixed='top' className='my-nav-bar' collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">My Web
+                    <Navbar.Brand href="/">
                         <img alt='' height='auto' width='54px' src={process.env.PUBLIC_URL + '/imgs/logo/t1-logo.png'}/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />

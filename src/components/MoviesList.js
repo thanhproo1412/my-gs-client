@@ -9,7 +9,8 @@ export const MoviesList = () => {
 
     return (
         <React.Fragment>
-            <h1 className='text-center mt-5'>Danh sách sản phẩm</h1>
+            <h1 className='listsanpham-title'>Danh sách sản phẩm</h1>
+            <hr style={{width: '50%', marginLeft: '5%'}}></hr>
             <div className='myRow'>
                 {movies.map(movie => (
                     <ItemCard name={movie.name} itemCardUrl={movie.itemCardUrl} ngayPhatHanh={movie.ngayPhatHanh}

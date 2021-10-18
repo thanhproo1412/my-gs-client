@@ -54,7 +54,7 @@ export const HomeIntro = () => {
           ))}
         </Row>
         <Row className="categories">
-          <MyButton1>View More</MyButton1>
+          <MyButton1><a href='/listsanpham'>View More</a></MyButton1>
         </Row>
       </Container>
       <div fluid className="the-goty">
