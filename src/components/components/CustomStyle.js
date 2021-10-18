@@ -100,6 +100,13 @@ export const Image169 = ({ src, alt }) => {
         </div>
     )
 };
+export const Image166 = ({ src, alt }) => {
+    return (
+        <div class="image-16-6">
+            <img src={src} alt={alt}/>
+        </div>
+    )
+};
 export const ImageSquare = ({ src, alt }) => {
     return (
         <div class="image-square">

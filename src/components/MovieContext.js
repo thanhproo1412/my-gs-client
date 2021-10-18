@@ -12,13 +12,13 @@ export const MovieProvider = props => {
             itemCardHoverLink: 'https://store.steampowered.com/app/1056640/Phantasy_Star_Online_2_New_Genesis/'
         },
         {
-            name: 'Phantasy Star Online 2 New Genesis - Great', itemCardUrl: 'https://i.pinimg.com/originals/11/48/d9/1148d94277eaf955e4bf4aa64ef08cc6.png',
+            name: 'Phantasy Star Online 2 New Genesis - Great', itemCardUrl: 'https://i.ebayimg.com/images/g/RosAAOSw0IBehR9X/s-l1600.jpg',
             ngayPhatHanh: 'Fri, December 4, 2021', gioPhatHanh: '2:29 PM', muiGioPhatHanh: '+07',
             itemCardHoverInfo: 'SUBSCRIBE PLEASE and LIKE PLEASE LEAVE A " [ OwO ] " IN THE COMMENTS! ▼ expand me ▼',
             itemCardHoverLink: 'https://store.steampowered.com/app/1056640/Phantasy_Star_Online_2_New_Genesis/'
         },
         {
-            name: 'Phantasy Star Online 2 New Genesis - Great', itemCardUrl: 'https://lh3.googleusercontent.com/proxy/ixkUzQrynkUGj33sKp0_skr4xRtWPzd4r4UZJ6tzv7uGlUpdzoYGLi4CK8urN5deJs8RmJ-5KbmtsU_X5mZdGUvBF58bfk3jrMndWIwJ6Q',
+            name: 'Phantasy Star Online 2 New Genesis - Great', itemCardUrl: 'https://photo2.tinhte.vn/data/attachment-files/2021/08/5581296_venom_2.jpg',
             ngayPhatHanh: 'Fri, December 4, 2021', gioPhatHanh: '2:29 PM', muiGioPhatHanh: '+07',
             itemCardHoverInfo: 'SUBSCRIBE PLEASE and LIKE PLEASE LEAVE A " [ OwO ] " IN THE COMMENTS! ▼ expand me ▼',
             itemCardHoverLink: 'https://store.steampowered.com/app/1056640/Phantasy_Star_Online_2_New_Genesis/'

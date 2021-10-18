@@ -53,9 +53,9 @@ function DanhSachSanPham() {
                 <MyButton2 className='btn btn-primary btn-sm'>thức uống</MyButton2>
             </div>
             <div>
-                <div>
+                <div className=''>
                     <form className="search-form" onSubmit={getSearch}>
-                        <input className="search-input" type="text" placeholder="Search" value={search}
+                        <input className="search-input" type="text" placeholder="Tìm kiếm món ăn" value={search}
                             onChange={updateSearch}
                         />
                         <button className="search-button" type="submit">{searchIcon}</button>

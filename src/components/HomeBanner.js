@@ -55,7 +55,7 @@ export const HomeBanner = () => (
                 interval="5000"
             >
                 <Carousel.Item className="my-carousel-item">
-                    <img alt='' className="d-block w-100" src="/imgs/background/banner1.jpg" />
+                    <img alt='' className="d-block w-100" src={process.env.PUBLIC_URL + "/imgs/background/banner1.jpg"} />
                     <Carousel.Caption bsPrefix='my-carousel-caption'>
                         <h3>BATTLEFIELD</h3>
                         <p className='mt-md-4'>Với Engine đồ họa Frostbite, Battlefield 4 sẽ khoác lên
@@ -72,7 +72,7 @@ export const HomeBanner = () => (
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="my-carousel-item">
-                    <img alt='' className="d-block w-100" src="/imgs/background/banner2.jpg" />
+                    <img alt='' className="d-block w-100" src={process.env.PUBLIC_URL + "/imgs/background/banner2.jpg"} />
                     <Carousel.Caption bsPrefix='my-carousel-caption'>
                         <h3>BATTLEFIELD</h3>
                         <p className='mt-md-4'>Với Engine đồ họa Frostbite, Battlefield 4 sẽ khoác lên
@@ -89,7 +89,7 @@ export const HomeBanner = () => (
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="my-carousel-item">
-                    <img alt='' className="d-block w-100" src="/imgs/background/banner3.jpg" />
+                    <img alt='' className="d-block w-100" src={process.env.PUBLIC_URL + "/imgs/background/banner3.jpg"} />
                     <Carousel.Caption bsPrefix='my-carousel-caption'>
                         <h3>BATTLEFIELD</h3>
                         <p className='mt-md-4'>Với Engine đồ họa Frostbite, Battlefield 4 sẽ khoác lên
