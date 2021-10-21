@@ -139,3 +139,29 @@ body {
   margin-top: 1em;
   margin-left: 2em;
 }
+.my-text-one-line{
+  white-space: inherit;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}.my-text-two-line{
+  white-space: inherit;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}.my-text-three-line{
+  white-space: inherit;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.my-text-four-line{
+  white-space: inherit;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

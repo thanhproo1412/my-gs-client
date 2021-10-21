@@ -59,3 +59,30 @@
 .my-nav-dropdown-user .dropdown-menu{
   left: -100px !important;
 }
+.my-nav-dropdown-add-to-cart .dropdown-menu{
+  right: -120px!important;
+  background: white !important;
+ }
+.my-nav-cart{
+ width:356px;
+ display: grid;
+ grid-template-columns: .5fr auto; 
+}
+.my-nav-cart a{
+  padding: 6px!important;
+  transition: all 0s!important;
+  color:rgb(51, 51, 51)!important;
+  font-weight: bold !important;
+}
+.my-nav-cart a:hover{
+  background: none !important;
+  color: black !important;
+}
+.my-nav-cart-delete-btn{
+  border:none;
+  background:none;
+  color:rgb(16, 221, 16);
+}
+.my-nav-cart-delete-btn:hover{
+  color:rgb(236, 37, 37);
+}
