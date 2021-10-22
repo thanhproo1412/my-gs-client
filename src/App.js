@@ -11,6 +11,7 @@ import { Login } from './components/Login';
 import { Register } from './components/Register';
 import { Contact } from './components/Contact';
 import { Adminboard } from './components/Adminboard';
+import { AdminPostSanPham } from './components/AdminPostSanPham';
 import { About } from './components/About';
 import { News } from './components/News';
 // import { Jumbotron } from './components/Jumbotron';
@@ -44,8 +45,7 @@ const App = () => {
   }, [])
 
   let HideFooter = window.location.pathname === '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyFooter />
-
-  let HideHeader = window.location.pathname === '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyNav username={username} />
+  let HideHeader = window.location.pathname === '/adminboard' && '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyNav username={username} />
 
   return (
     <React.Fragment style={{ margin: '0px', padding: '0px' }}>
@@ -57,6 +57,7 @@ const App = () => {
             <Route style={{ margin: '0px', padding: '0px' }} exact path="/" component={Home} />
             <Route path="/TodoPage" component={() => <TodoPage authorized={true} />} />
             <Route path="/adminboard" component={Adminboard} />
+            <Route path="/adminboard/postsanpham" component={AdminPostSanPham} />
             <Route path="/Login" component={Login} />
             <Route path="/register" component={Register} />
             <Route exact path="/ListSanPham" component={ListSanPham} />

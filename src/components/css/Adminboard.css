@@ -289,6 +289,9 @@ tr td:last-child {
   margin-left: 0.5rem;
   color: var(--theme--main-color);
 }
+.sidebar-toggle{
+  transition:.3s;
+}
 @media only screen and (max-width: 1200px) {
   .sidebar-toggle {
     width: 65px;
@@ -303,7 +306,7 @@ tr td:last-child {
     margin-left: 0em;
   }
   .sidebar-toggle li a {
-    padding-left: 0.3em;
+    padding-left: 0;
   }
   .main-content {
     margin-left: 65px;
@@ -365,4 +368,7 @@ tr td:last-child {
     margin-left: 0;
     margin-top: 2em;
   }
+}
+.sidebar-menu ul{
+  padding-left: 0;
 }
