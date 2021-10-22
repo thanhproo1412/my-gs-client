@@ -1,0 +1,23 @@
+.my-add-to-cart{
+  display:grid;
+  grid-template-columns: .6fr auto;
+}
+.my-add-to-cart a{
+  padding: 6px!important;
+  transition: all 0s!important;
+  color:rgb(38, 53, 255)!important;
+  font-weight: bold !important;
+}
+.my-add-to-cart a:hover{
+  background: none !important;
+  color: black !important;
+}
+.my-nav-cart-delete-btn{
+  border:none;
+  background:none;
+  color:rgb(16, 221, 16);
+  padding: 0.1em .6em;
+}
+.my-nav-cart-delete-btn:hover{
+  color:rgb(236, 37, 37);
+}

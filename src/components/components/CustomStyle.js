@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Ripples from 'react-ripples'
+import Ripples from 'react-ripples';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/CustomStyle.css';

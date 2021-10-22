@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Navbar, NavDropdown, Nav } from 'react-bootstrap';
+import { Container, Navbar, NavDropdown, Nav, Dropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/NavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
+import { AddToCart } from './components/AddToCart';
+import Ripples from 'react-ripples';
 
 const faShoppingCartIcon = <FontAwesomeIcon icon={faShoppingCart} />
-const faTrashIcon = <FontAwesomeIcon icon={faTrash} />
 
 export const MyNav = ({ username }) => {
     const history = useHistory()
@@ -67,36 +68,26 @@ export const MyNav = ({ username }) => {
                                 localStorage.getItem('authToken') ?
                                     <div className='d-flex flex-row'>
                                         <NavDropdown align="end" className='my-nav-dropdown-add-to-cart dropdown-menu-right' align='start' bsPrefix='my-nav-link my-nav-dropdown' title={faShoppingCartIcon} id="navbarScrollingDropdown">
-                                            <div className='my-nav-cart'>
-                                                <div className='p-2'>
-                                                    <img className='img-fluid img-thumbnail' src='https://img.amiami.com/images/product/review/213/FIGURE-130184_15.jpg' alt='' />
-                                                </div>
-                                                <div className='my-nav-cart-info'>
-                                                    <a href='/#' className='my-text-one-line'>
-                                                        Figure ningguang
-                                                    </a>
-                                                    <div className='d-flex flex-row justify-content-around'>
-                                                        <div>
-                                                            <div className='d-inline-block'>
-                                                                Số lượng:&nbsp;
-                                                            </div>
-                                                            <div className='d-inline-block'>2</div>
-                                                        </div>
-                                                        <div>
-                                                            <div className='d-inline-block'>
-                                                                Giá:&nbsp;
-                                                            </div>
-                                                            <div className='d-inline-block'> 888$</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='d-flex flex-row-reverse'>
-                                                        <div className='pe-4'>
-                                                            <button className='my-nav-cart-delete-btn' onClick={()=>{}}>{faTrashIcon}</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div className='my-nav-dropdown-cart'>
+                                                <AddToCart src='https://img.amiami.com/images/product/review/213/FIGURE-130184_15.jpg' alt=''
+                                                name='Figure ningguang' soluong='2' price='888$' link='/contact' />
+                                                <AddToCart />
+                                                <AddToCart />
+                                                <AddToCart />
+                                                <AddToCart />
+                                                <AddToCart />
+                                                <AddToCart />
+                                                <AddToCart />
                                             </div>
-                                            <NavDropdown.Divider />
+                                            <Dropdown.Divider />
+                                            <div className='my-nav-dropdown-cart-end'>
+                                                <Ripples style={{ borderRadius: '50px' }} color="rgba(255,255,255,0.5)" during={650}>
+                                                    <a className='my-nav-dropdown-cart-view-more-btn' href='/#'>Xem toàn bộ</a>
+                                                </Ripples>
+                                                <Ripples style={{ borderRadius: '50px' }} color="rgba(255,255,255,0.5)" during={650}>
+                                                    <a className='my-nav-dropdown-cart-check-out-btn' href='/#'>Thanh toán</a>
+                                                </Ripples>
+                                            </div>
                                         </NavDropdown>
                                         <NavDropdown className='my-nav-dropdown-user' align='start' bsPrefix='my-nav-link my-nav-dropdown' title={username} id="navbarScrollingDropdown">
                                             <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
