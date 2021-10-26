@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAccusoft } from '@fortawesome/free-brands-svg-icons';
 import { faIgloo, faUser, faToolbox, faStore, faClipboardList, faBars, faSearch, faBoxes, faArrowRight, faUserCircle, faPhone, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { MyButton3 } from './components/CustomStyle';
+import { NavLink } from 'react-router-dom';
 import './css/Adminboard.css';
 
 const faAccusoftIcon = <FontAwesomeIcon icon={faAccusoft} />
@@ -39,27 +40,40 @@ export const AdminNav = (props) => {
                     <div className='sidebar-menu'>
                         <ul>
                             <li className='sidebar-item'>
-                                <a href='/#' className='active'><span>{faUserIcon}</span>
-                                    <span>Profile</span></a>
+                                <NavLink to="/adminboard/profile" activeClassName="active">
+                                    <span>{faUserIcon}</span>
+                                    <span>Profile</span>
+                                </NavLink>
                             </li>
                             <li className='sidebar-item'>
-                                <a href='/adminboard/postsanpham' className=''><span>{faStoreIcon}</span>
-                                    <span>Store</span></a>
-                            </li><li className='sidebar-item'>
-                                <a href='/#' className=''><span>{faClipboardListIcon}</span>
-                                    <span>Project</span></a>
+                                <NavLink to="/adminboard/postsanpham" activeClassName="active">
+                                    <span>{faStoreIcon}</span>
+                                    <span>Store</span>
+                                </NavLink>
                             </li>
                             <li className='sidebar-item'>
-                                <a href='/#' className=''><span>{faToolboxIcon}</span>
-                                    <span>Settings</span></a>
+                                <NavLink to="/adminboard/project" activeClassName="active">
+                                    <span>{faClipboardListIcon}</span>
+                                    <span>Project</span>
+                                </NavLink>
                             </li>
                             <li className='sidebar-item'>
-                                <a href='/#' className=''><span>{faIglooIcon}</span>
-                                    <span>Link</span></a>
+                                <NavLink to="/adminboard/settings" activeClassName="active">
+                                    <span>{faToolboxIcon}</span>
+                                    <span>Settings</span>
+                                </NavLink>
                             </li>
                             <li className='sidebar-item'>
-                                <a href='/#' className=''><span>{faIglooIcon}</span>
-                                    <span>Link</span></a>
+                                <NavLink to="/adminboard/Link" activeClassName="active">
+                                    <span>{faIglooIcon}</span>
+                                    <span>Link</span>
+                                </NavLink>
+                            </li>
+                            <li className='sidebar-item'>
+                                <NavLink to="/adminboard/Link2" activeClassName="active">
+                                    <span>{faIglooIcon}</span>
+                                    <span>Link</span>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>

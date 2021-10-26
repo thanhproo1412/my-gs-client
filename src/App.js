@@ -44,15 +44,14 @@ const App = () => {
       .catch(err => console.log(err));
   }, [])
 
-  let HideFooter = window.location.pathname === '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyFooter />
-  let HideHeader = window.location.pathname === '/adminboard' && '/adminboard' && '/Login' && '/Confirm' && '/Signup' ? null : <MyNav username={username} />
-
+  let HideHeader = ((window.location.pathname === '/Login' && '/Confirm' && '/Signup') || (window.location.pathname.startsWith('/adminboard'))) ? null : <MyNav username={username} />
+  let HideFooter = ((window.location.pathname === '/Login' && '/Confirm' && '/Signup') || (window.location.pathname.startsWith('/adminboard'))) ? null : <MyNav username={username} />
+  //      && là and, || là or
   return (
     <React.Fragment style={{ margin: '0px', padding: '0px' }}>
       <Layout style={{ margin: '0px', padding: '0px', marginTop: '160px' }}>
         <Router style={{ margin: '0px', padding: '0px' }}>
           {HideHeader}
-          {/* <MyNav username={username} /> */}
           <Switch style={{ margin: '0px', padding: '0px' }}>
             <Route style={{ margin: '0px', padding: '0px' }} exact path="/" component={Home} />
             <Route path="/TodoPage" component={() => <TodoPage authorized={true} />} />

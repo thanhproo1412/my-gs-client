@@ -25,7 +25,6 @@ export const AdminboardHome = () => {
 
     return (
         <React.Fragment>
-
             <div className='main-content-head'>
                 <h3>
                     <label for='nav-toggle'>

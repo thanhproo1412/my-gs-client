@@ -50,7 +50,7 @@ export const MyNav = ({ username }) => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link className='my-nav-link my-nav-link-active' href="/">Trang Chủ</Nav.Link>
+                            <Nav.Link className='my-nav-link my-nav-link' href="/">Trang Chủ</Nav.Link>
                             <Nav.Link className='my-nav-link' href="/listsanpham">Sản Phẩm</Nav.Link>
                             <Nav.Link className='my-nav-link' href="/about">Giới thiệu</Nav.Link>
                             <Nav.Link className='my-nav-link' href="/news">tin tức</Nav.Link>
@@ -91,7 +91,7 @@ export const MyNav = ({ username }) => {
                                         </NavDropdown>
                                         <NavDropdown className='my-nav-dropdown-user' align='start' bsPrefix='my-nav-link my-nav-dropdown' title={username} id="navbarScrollingDropdown">
                                             <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
-                                            <NavDropdown.Item href="/adminboard">Bảng Điều Khiển</NavDropdown.Item>
+                                            <NavDropdown.Item href="/adminboard/profile">Bảng Điều Khiển</NavDropdown.Item>
                                         </NavDropdown>
                                     </div>
                                     :
