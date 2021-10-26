@@ -10,15 +10,12 @@ import { getDroppedOrSelectedFiles } from 'html5-file-selector';
 const fileParams = ({ meta }) => {
     return { url: 'https://httpbin.org/post' }
 }
-
 const onFileChange = ({ meta, file }, status) => {
     console.log(status, meta, file)
 }
-
 const onSubmit = (files, allFiles) => {
     allFiles.forEach(f => f.remove())
 }
-
 const getFilesFromEvent = e => {
     return new Promise(resolve => {
         getDroppedOrSelectedFiles(e).then(chosenFiles => {
@@ -26,7 +23,6 @@ const getFilesFromEvent = e => {
         })
     })
 }
-
 const selectFileInput = ({ accept, onFiles, files, getFilesFromEvent }) => {
     const textMsg = files.length > 0 ? 'Upload More' : 'Select Files'
     return (
