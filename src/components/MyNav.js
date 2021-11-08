@@ -14,7 +14,7 @@ export const MyNav = ({ username }) => {
     const navigate = useNavigate()
     const logout = () => {
         localStorage.removeItem('authToken')
-        navigate.push('/login')
+        navigate('/login')
         window.location.reload();
     }
     const [scrollY, setScrollY] = useState(0);
