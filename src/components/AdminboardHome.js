@@ -7,14 +7,14 @@ import { faIgloo, faUser, faToolbox, faStore, faClipboardList, faBars, faSearch,
 import { MyButton3 } from './components/CustomStyle';
 import './css/Adminboard.css';
 
-const faAccusoftIcon = <FontAwesomeIcon icon={faAccusoft} />
-const faIglooIcon = <FontAwesomeIcon icon={faIgloo} />
-const faUserIcon = <FontAwesomeIcon icon={faUser} />
-const faToolboxIcon = <FontAwesomeIcon icon={faToolbox} />
-const faStoreIcon = <FontAwesomeIcon icon={faStore} />
-const faClipboardListIcon = <FontAwesomeIcon icon={faClipboardList} />
-const faBarsIcon = <FontAwesomeIcon icon={faBars} />
-const faSearchIcon = <FontAwesomeIcon icon={faSearch} />
+// const faAccusoftIcon = <FontAwesomeIcon icon={faAccusoft} />
+// const faIglooIcon = <FontAwesomeIcon icon={faIgloo} />
+// const faUserIcon = <FontAwesomeIcon icon={faUser} />
+// const faToolboxIcon = <FontAwesomeIcon icon={faToolbox} />
+// const faStoreIcon = <FontAwesomeIcon icon={faStore} />
+// const faClipboardListIcon = <FontAwesomeIcon icon={faClipboardList} />
+// const faBarsIcon = <FontAwesomeIcon icon={faBars} />
+// const faSearchIcon = <FontAwesomeIcon icon={faSearch} />
 const faBoxesIcon = <FontAwesomeIcon icon={faBoxes} />
 const faArrowRightIcon = <FontAwesomeIcon icon={faArrowRight} />
 const faUserCircleIcon = <FontAwesomeIcon icon={faUserCircle} />
@@ -25,25 +25,6 @@ export const AdminboardHome = () => {
 
     return (
         <React.Fragment>
-            <div className='main-content-head'>
-                <h3>
-                    <label for='nav-toggle'>
-                        <span>{faBarsIcon}</span>
-                        DashBoard
-                    </label>
-                </h3>
-                <div className="search-wrapper">
-                    <input type="search" placeholder='Search here' className="" />
-                    <span>{faSearchIcon}</span>
-                </div>
-                <div className='user-wrapper'>
-                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/baed7084-e7c6-4507-9dc8-737f22173fcf/d8u6y1h-1f1fd29e-d9b4-4625-90cc-2266cc145b7b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JhZWQ3MDg0LWU3YzYtNDUwNy05ZGM4LTczN2YyMjE3M2ZjZlwvZDh1NnkxaC0xZjFmZDI5ZS1kOWI0LTQ2MjUtOTBjYy0yMjY2Y2MxNDViN2IucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2AjSYFEnoLDiiJmOxEFE3rFoTEf1lf4QQHuIRi9Uvqw" alt='' />
-                    <div>
-                        <div className='user-name'>Hai Thanh</div>
-                        <small><span>Role: </span>admin</small>
-                    </div>
-                </div>
-            </div>
             <div className='main-content-body'>
                 <div className='cards'>
                     <div className='card-single'>

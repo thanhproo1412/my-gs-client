@@ -33,6 +33,7 @@
 .main-content {
   margin-left: 345px;
   transition: 0.3s;
+  margin-top: 65px;
 }
 .sidebar-menu {
   margin-left: 0.5em;
@@ -150,7 +151,6 @@
   cursor: pointer;
 }
 .main-content-body {
-  margin-top: 62px;
   padding: 1em;
   background: #f0f0f0;
   min-height: calc(100vh - 62px);

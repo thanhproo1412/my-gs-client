@@ -40,7 +40,7 @@ export const AdminProject = () => {
                                 <Form.Control type="number" placeholder="" onChange={updateNumb2} value={numb2}/>
                             </FloatingLabel>
                         </Col>
-                        <Col xs={1}>
+                        <Col xs={2}>
                             <Button onClick={calculator}>calculate</Button>
                         </Col>
                         <Col xs={2} className='project-result'>

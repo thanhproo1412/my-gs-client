@@ -55,6 +55,7 @@ export const MyNav = ({ username }) => {
                             <Nav.Link className='my-nav-link' href="/about">Giới thiệu</Nav.Link>
                             <Nav.Link className='my-nav-link' href="/news">tin tức</Nav.Link>
                             <Nav.Link className='my-nav-link' href="/contact">Liên hệ</Nav.Link>
+                            <Nav.Link className='my-nav-link' href="/todopage">Liên hệ</Nav.Link>
                             <NavDropdown bsPrefix='my-nav-dropdown' title="Dropdown" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -91,7 +92,7 @@ export const MyNav = ({ username }) => {
                                         </NavDropdown>
                                         <NavDropdown className='my-nav-dropdown-user' align='start' bsPrefix='my-nav-link my-nav-dropdown' title={username} id="navbarScrollingDropdown">
                                             <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
-                                            <NavDropdown.Item href="/adminboard">Bảng Điều Khiển</NavDropdown.Item>
+                                            <NavDropdown.Item href="/adminboard/home">Bảng Điều Khiển</NavDropdown.Item>
                                         </NavDropdown>
                                     </div>
                                     :
