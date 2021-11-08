@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Navbar, NavDropdown, Nav, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/adminIncome.css'
+// import './css/adminIncome.css'
 
 export const AdminIncome = () => {
     return (
