@@ -27,7 +27,7 @@ export const Login = () => {
             })
             .then((res) => {
                 localStorage.setItem('authToken', res.data)
-                navigate.replace('/')
+                navigate('/')
                 window.location.reload(); 
             })
             .catch(err => console.log(err));
