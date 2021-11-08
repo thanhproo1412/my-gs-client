@@ -4,11 +4,11 @@ import { MyButton1 } from './components/CustomStyle';
 import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
 
-    const history = useHistory()
+    const navigate = useNavigate()
     // const getToken = localStorage.getItem('authToken')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -27,7 +27,7 @@ export const Login = () => {
             })
             .then((res) => {
                 localStorage.setItem('authToken', res.data)
-                history.replace('/')
+                navigate.replace('/')
                 window.location.reload(); 
             })
             .catch(err => console.log(err));

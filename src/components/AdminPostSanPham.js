@@ -43,7 +43,7 @@ const selectFileInput = ({ accept, onFiles, files, getFilesFromEvent }) => {
     )
 }
 
-export const AdminPostSanPham = () => {
+export const AdminPostSanPham = ({match}) => {
     return (
         <React.Fragment>
             <div className="adminPostSanPham">

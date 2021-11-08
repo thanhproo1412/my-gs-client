@@ -4,17 +4,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/NavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { AddToCart } from './components/AddToCart';
 import Ripples from 'react-ripples';
 
 const faShoppingCartIcon = <FontAwesomeIcon icon={faShoppingCart} />
 
 export const MyNav = ({ username }) => {
-    const history = useHistory()
+    const navigate = useNavigate()
     const logout = () => {
         localStorage.removeItem('authToken')
-        history.push('/login')
+        navigate.push('/login')
         window.location.reload();
     }
     const [scrollY, setScrollY] = useState(0);
@@ -91,7 +91,7 @@ export const MyNav = ({ username }) => {
                                         </NavDropdown>
                                         <NavDropdown className='my-nav-dropdown-user' align='start' bsPrefix='my-nav-link my-nav-dropdown' title={username} id="navbarScrollingDropdown">
                                             <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
-                                            <NavDropdown.Item href="/adminboard/profile">Bảng Điều Khiển</NavDropdown.Item>
+                                            <NavDropdown.Item href="/adminboard">Bảng Điều Khiển</NavDropdown.Item>
                                         </NavDropdown>
                                     </div>
                                     :

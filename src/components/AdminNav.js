@@ -7,6 +7,7 @@ import { faIgloo, faUser, faToolbox, faStore, faClipboardList, faBars, faSearch,
 import { MyButton3 } from './components/CustomStyle';
 import { NavLink } from 'react-router-dom';
 import './css/Adminboard.css';
+import { Link } from 'react-router-dom';
 
 const faAccusoftIcon = <FontAwesomeIcon icon={faAccusoft} />
 const faIglooIcon = <FontAwesomeIcon icon={faIgloo} />
@@ -40,40 +41,40 @@ export const AdminNav = (props) => {
                     <div className='sidebar-menu'>
                         <ul>
                             <li className='sidebar-item'>
-                                <NavLink to="/adminboard/profile" activeClassName="active">
+                                <Link to="/adminboard/home" activeClassName="active">
                                     <span>{faUserIcon}</span>
                                     <span>Profile</span>
-                                </NavLink>
+                                </Link>
                             </li>
                             <li className='sidebar-item'>
-                                <NavLink to="/adminboard/postsanpham" activeClassName="active">
+                                <Link to="/adminboard/postsanpham" active="active">
                                     <span>{faStoreIcon}</span>
                                     <span>Store</span>
-                                </NavLink>
+                                </Link>
                             </li>
                             <li className='sidebar-item'>
-                                <NavLink to="/adminboard/project" activeClassName="active">
+                                <Link to="/adminboard/project" active="active">
                                     <span>{faClipboardListIcon}</span>
                                     <span>Project</span>
-                                </NavLink>
+                                </Link>
                             </li>
                             <li className='sidebar-item'>
-                                <NavLink to="/adminboard/settings" activeClassName="active">
+                                <Link to="/adminboard/settings" active="active">
                                     <span>{faToolboxIcon}</span>
                                     <span>Settings</span>
-                                </NavLink>
+                                </Link>
                             </li>
                             <li className='sidebar-item'>
-                                <NavLink to="/adminboard/Link" activeClassName="active">
+                                <Link to="/adminboard/Link" activeClassName="active">
                                     <span>{faIglooIcon}</span>
                                     <span>Link</span>
-                                </NavLink>
+                                </Link>
                             </li>
                             <li className='sidebar-item'>
-                                <NavLink to="/adminboard/Link2" activeClassName="active">
+                                <Link to="/adminboard/Link2" activeClassName="active">
                                     <span>{faIglooIcon}</span>
                                     <span>Link</span>
-                                </NavLink>
+                                </Link>
                             </li>
                         </ul>
                     </div>
